@@ -24,14 +24,14 @@ const Header = () => {
 					<Image
 						className='hidden lg:block'
 						src='/assets/images/logo.svg'
-						alt='W. Logo'
+						alt='W. Logo on Desktop'
 						width={64}
 						height={40}
 					/>
 					<Image
 						className='block lg:hidden'
 						src='/assets/images/logo.svg'
-						alt='W. Logo'
+						alt='W. Logo on Mobile'
 						width={45}
 						height={28}
 					/>
