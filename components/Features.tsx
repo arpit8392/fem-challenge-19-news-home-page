@@ -3,11 +3,13 @@ import Feature from './Feature'
 
 const Features = () => {
 	return (
-		<section className='flex flex-col gap-8 lg:flex-row '>
+		<ul className='flex flex-col gap-8 lg:flex-row '>
 			{featuresData.map((feature) => (
-				<Feature key={feature.id} {...feature} />
+				<li key={feature.id}>
+					<Feature {...feature} />
+				</li>
 			))}
-		</section>
+		</ul>
 	)
 }
 export default Features

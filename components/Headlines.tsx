@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Headlines = () => {
 	return (
-		<div className='flex flex-col gap-y-4 py-4 lg:grid lg:grid-cols-2 lg:gap-7 lg:pt-7'>
+		<article className='flex flex-col gap-y-4 py-4 lg:grid lg:grid-cols-2 lg:gap-7 lg:pt-7'>
 			<h1 className='text-4xl font-extrabold text-veryDarkBlue lg:text-6xl'>
 				The Bright Future of Web 3.0?
 			</h1>
@@ -18,7 +18,7 @@ const Headlines = () => {
 					Read More
 				</Link>
 			</div>
-		</div>
+		</article>
 	)
 }
 export default Headlines

@@ -16,15 +16,13 @@ const Feature = ({ id, image, headline, summary }: Props) => {
 				height={129}
 			/>
 
-			<div className='flex flex-col gap-y-3'>
+			<article className='flex flex-col gap-y-3'>
 				<div className='text-3xl font-bold text-silver'>{`0${id}`}</div>
 				<div className='flex flex-col gap-y-2'>
-					<h3 className='text-lg font-extrabold text-veryDarkBlue'>
-						{headline}
-					</h3>
+					<p className='text-lg font-extrabold text-veryDarkBlue'>{headline}</p>
 					<p className='max-w-xs text-gunmetal'>{summary}</p>
 				</div>
-			</div>
+			</article>
 		</div>
 	)
 }
