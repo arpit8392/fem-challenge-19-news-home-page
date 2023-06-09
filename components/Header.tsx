@@ -14,8 +14,6 @@ const navigation = [
 	{ name: 'Categories', href: '#' },
 ]
 
-// TODO: Classes need to be reviewed and only the required ones need to be kept
-
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	return (
@@ -58,31 +56,30 @@ const Header = () => {
 					))}
 				</div>
 			</nav>
-			{/* TODO: This needs aligning to the design */}
 			<Dialog
 				as='div'
 				className='lg:hidden '
 				open={mobileMenuOpen}
 				onClose={setMobileMenuOpen}>
-				<div className='fixed inset-0 z-10' />
-				<Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-2/3 overflow-hidden bg-offWhite p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
-					<div className='flex justify-end pt-6 pb-20'>
+				<div className='fixed inset-0 z-10 bg-veryDarkBlue opacity-50 mix-blend-multiply' />
+				<Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-2/3 max-w-xs overflow-hidden bg-offWhite p-6'>
+					<div className='flex justify-end pb-20 pt-6'>
 						<button
 							type='button'
-							className='-m-2.5 rounded-md p-2.5 text-gray-700'
+							className='text-gray-700'
 							onClick={() => setMobileMenuOpen(false)}>
 							<span className='sr-only'>Close menu</span>
 							<XMarkIcon className='h-8 w-8' aria-hidden='true' />
 						</button>
 					</div>
-					<div className='mt-6 flow-root'>
+					<div>
 						<div className='-my-6 divide-y divide-gray-500/10'>
-							<div className='gap-6'>
+							<div className='flex flex-col gap-y-6'>
 								{navigation.map((item) => (
 									<Link
 										key={item.name}
 										href={item.href}
-										className='-mx-3 block px-3 py-2 text-lg text-veryDarkBlue hover:text-lightVermillion'>
+										className='block text-lg text-veryDarkBlue hover:text-lightVermillion'>
 										{item.name}
 									</Link>
 								))}
